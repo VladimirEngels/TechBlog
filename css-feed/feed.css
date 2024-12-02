@@ -1,0 +1,249 @@
+/* Контейнер для карточек */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Устанавливаем строгую ширину карточек */
+    gap: 30px; /* Увеличиваем расстояние между карточками */
+    margin-top: 20px;
+}
+
+/* Карточка статьи */
+.article-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Темное свечение вокруг карточки */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Для позиционирования ярлыков */
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Усиление свечения при наведении */
+}
+
+.article-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+/* Контейнер с информацией */
+.article-info {
+    padding: 20px 25px; /* Увеличены боковые и вертикальные отступы */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Заголовок статьи */
+.article-title {
+    font-size: 1.8rem; /* Увеличен размер заголовка */
+    line-height: 1.4; /* Улучшено межстрочное расстояние */
+    margin-bottom: 15px; /* Увеличен отступ между заголовком и описанием */
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold; /* Делает заголовок более заметным */
+}
+
+.article-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-title a:hover {
+    color: #4fa3f7;
+}
+
+/* Описание статьи */
+.article-description {
+    font-size: 1.2rem; /* Увеличен размер текста */
+    line-height: 1.6; /* Улучшено межстрочное расстояние для удобства чтения */
+    color: #ddd; /* Сделан чуть светлее для контраста с фоном */
+    margin-bottom: 20px; /* Добавлен дополнительный отступ для воздуха */
+    text-align: justify; /* Выровнен текст по ширине */
+}
+
+/* Метаданные статьи */
+.article-meta {
+    font-size: 1rem; /* Чуть увеличен размер метаданных */
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Центрирование по вертикали */
+    margin-top: auto; /* Отодвинуть к низу карточки */
+}
+
+/* Ярлыки статей */
+.article-tags {
+    position: absolute; /* Позволяет свободно перемещать ярлыки */
+    top: 10px; /* Расположение сверху */
+    left: 10px; /* Расположение слева */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Расстояние между ярлыками */
+}
+
+.article-tags .tag {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.article-tags .tag:hover {
+    background-color: #4fa3f7;
+}
+
+/* Изображение статьи */
+.article-image {
+    margin-bottom: 0; /* Убираем нижний отступ у изображения */
+    display: block; /* Убедитесь, что картинка занимает отдельный блок */
+    width: 100%;
+    border-radius: 8px; /* Добавим плавные углы для красоты */
+}
+
+/* Заголовок статьи */
+.article-title {
+    margin-top: 10px; /* Минимальный отступ сверху */
+}
+
+/* Светлая тема для body */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Светлая тема для карточек */
+  body.light-theme .article-card {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Лёгкое свечение в светлой теме */
+  }
+
+  body.light-theme .article-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Усиление свечения в светлой теме */
+  }
+  
+  body.light-theme .article-title {
+    color: #0056b3; /* Более темный цвет для текста заголовка */
+  }
+  
+  body.light-theme .article-title a:hover {
+    color: #003d80; /* Цвет при наведении */
+  }
+  
+  body.light-theme .article-description {
+    color: #333; /* Темный текст для описания */
+  }
+  
+  body.light-theme .article-meta {
+    color: #666; /* Темнее для метаданных */
+  }
+  
+  body.light-theme .article-tags .tag {
+    background-color: #0056b3; /* Темный цвет для ярлыков */
+    color: #ffffff;
+  }
+  
+  body.light-theme .article-tags .tag:hover {
+    background-color: #003d80; /* Цвет ярлыков при наведении */
+  }
+  
+  /* Светлая тема для изображения */
+  body.light-theme .article-image img {
+    border-bottom: 1px solid #ccc;
+  }
+  
+
+  main.content-container {
+    margin-bottom: 50px; /* Увеличиваем расстояние между main и footer */
+  }
+  
+ 
+  
+  .article-reactions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+/* Общие стили для кнопок */
+.like-btn, .dislike-btn {
+    background-color: transparent;
+    border: 2px solid #ccc; /* Более выраженная граница */
+    border-radius: 30px; /* Сделаем края более округлыми */
+    padding: 10px 20px; /* Увеличим пространство внутри кнопки */
+    cursor: pointer;
+    font-size: 1.2rem; /* Увеличим размер шрифта */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, border 0.3s ease; /* Плавный переход для всех эффектов */
+    font-weight: bold; /* Сделаем шрифт жирным */
+    position: relative;
+  }
+  
+  /* Эффекты при наведении на кнопки */
+  .like-btn:hover, .dislike-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Легкий фон при наведении */
+    border-color: #888; /* Меняем цвет границы при наведении */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкое свечение при наведении */
+    transform: scale(1.05); /* Легкое увеличение кнопки при наведении */
+  }
+  
+  /* Активные состояния кнопок (лайк и дизлайк) */
+  .like-btn.active {
+    color: #fff;
+    background-color: #4caf50; /* Зеленый для лайков */
+    border-color: #388e3c; /* Более темная граница при активации */
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.5); /* Легкое свечение для лайков */
+  }
+  
+  .dislike-btn.active {
+    color: #fff;
+    background-color: #f44336; /* Красный для дизлайков */
+    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.5); /* Легкое свечение для дизлайков */
+  }
+  
+  /* Счётчики лайков и дизлайков */
+  .like-count, .dislike-count {
+    color: #555;
+    font-weight: bold; /* Подчеркнем значение счетчиков */
+    font-size: 1.1rem; /* Немного увеличим размер текста счетчиков */
+    transition: color 0.3s ease; /* Плавное изменение цвета текста */
+  }
+  
+
+  /* Плавная анимация для кнопок при нажатии */
+  .like-btn:active, .dislike-btn:active {
+    transform: scale(0.95); /* Легкое уменьшение кнопки при нажатии */
+    transition: transform 0.2s ease; /* Плавное уменьшение */
+  }
+  
+  /* Чтобы счетчик не менял цвет */
+  .like-btn .like-count, .dislike-btn .dislike-count {
+    color: #555; /* Устанавливаем нормальный цвет для счетчиков */
+  }
+  
+
+  

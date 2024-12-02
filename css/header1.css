@@ -1,0 +1,247 @@
+/* Хедер */
+.header {
+    background-color: #202020; /* Темный фон хедера */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    border-bottom: 1px solid #333; /* Нижняя граница */
+}
+
+.header-container {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex; /* Используем flexbox для размещения элементов */
+    justify-content: space-between; /* Элементы на разные стороны */
+    align-items: center; /* Выравнивание по вертикали */ 
+    flex-wrap: wrap; /* Размещение элементов на новых строках при необходимости */
+}
+
+.header-left {
+    flex: 1; /* Левый блок занимает 1/3 доступной ширины */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Расстояние между элементами */
+}
+
+.header-center {
+    flex: 2; /* Центральный блок занимает 2/3 доступной ширины */
+    text-align: center; /* Выравнивание по центру */
+}
+
+.header-right {
+    flex: 1; /* Правый блок занимает 1/3 доступной ширины */
+    display: flex;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    align-items: center;
+    gap: 10px; /* Расстояние между элементами */
+}
+
+/* Хедер в светлой теме */
+body.light-theme .header {
+    background-color: #f1f1f1; /* Светлый фон для хедера */
+    border-bottom: 1px solid #ddd; /* Светлая нижняя граница */
+}
+
+
+.search-form {
+     /* Скрываем форму по умолчанию */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 100%; /* Форма будет отображаться ниже поля */
+    right: 0; /* Привязываем к правому краю */
+    background-color: #1e1e1e; /* Темный фон формы */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+    padding: 10px;
+    width: 250px; /* Ширина формы */
+    z-index: 100; /* Устанавливаем на передний план */
+    opacity: 0; /* По умолчанию форма невидима */
+    transform: translateY(-10px); /* Начальное смещение формы */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавный переход */
+    display: flex;
+}
+
+.search-form.visible {
+    /* display: flex; */
+    opacity: 1; /* Делаем форму видимой */
+    transform: translateY(0); /* Снимаем смещение */
+}
+
+.search-bar {
+    width: calc(100% - 60px); /* Ширина поля с учетом кнопки */
+    margin-right: 10px;
+    padding: 8px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #303030;
+    color: #fff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s; /* Плавный переход цвета рамки */
+}
+
+.search-bar:focus {
+    border-color: #0078d7; /* Цвет рамки при фокусе */
+}
+
+.search-btn {
+    background-color: #0078d7; /* Цвет кнопки */
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s; /* Плавный переход фона */
+    border: none;
+    cursor: pointer; /* Курсор в виде руки */
+}
+
+.search-btn:hover {
+    background-color: #005bb5; /* Цвет кнопки при наведении */
+}
+
+.search-icon {
+    background: none; /* Без фона */
+    border: none; /* Без границ */
+    font-size: 1.5rem; /* Размер иконки */
+    color: #b0b0b0; /* Цвет иконки */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.search-icon:hover {
+    color: #ffffff; /* Цвет иконки при наведении */
+}
+
+.author-btn, .login-btn {
+    background-color: #0078d7; /* Цвет кнопок */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s ease; /* Плавные переходы для фона и трансформации */
+}
+
+.author-btn:hover, .login-btn:hover {
+    background-color: #005bb5; /* Цвет кнопок при наведении */
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+}
+/* Новый стиль для полей ввода */
+.search-bar {
+    border: 1px solid #555; /* Серый бордер */
+    padding: 8px 12px; /* Внутренние отступы */
+    border-radius: 6px; /* Скругленные углы */
+    outline: none; /* Убираем обводку при фокусе */
+    background-color: #1e1e1e; /* Темный фон */
+    color: #ffffff; /* Белый цвет текста */
+    transition: border-color 0.3s ease; /* Плавное изменение цвета бордера */
+}
+
+/* Поле поиска и кнопки */
+.search-container {
+    position: relative;
+}
+
+.search-form {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: 250px;
+    z-index: 100;
+    visibility: hidden; /* Элемент скрыт, но доступен для анимации */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s; /* Устанавливаем задержку для видимости */
+}
+
+.search-form.visible {
+    visibility: visible; /* Делает элемент видимым */
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Убираем задержку для видимости */
+}
+
+/* Стили для контейнера с логотипом и кнопкой */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Вертикальная линия между логотипом и кнопкой "Как стать автором" */
+.vertical-line {
+    width: 1px;              /* Ширина полоски */
+    height: 40px;            /* Высота полоски (можно настроить) */
+    background-color: #ccc;  /* Цвет полоски */
+    margin: 0 20px;          /* Отступы с обеих сторон, чтобы линия не прилегала плотно к элементам */
+}
+
+/* Стили для кнопки "Как стать автором" */
+.author-btn {
+    background-color: #2c3e50; /* Темно-синий цвет для фона */
+    color: white;              /* Цвет текста */
+    border: none;              /* Без рамки */
+    padding: 10px 20px;        /* Отступы (вертикальный и горизонтальный) */
+    font-size: 16px;           /* Размер шрифта */
+    font-weight: bold;         /* Жирное начертание */
+    text-transform: uppercase; /* Преобразовать текст в верхний регистр */
+    border-radius: 25px;       /* Скругленные углы */
+    cursor: pointer;           /* Курсор в виде руки */
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Плавный переход для фона и эффекта нажатия */
+}
+
+/* Эффект при наведении на кнопку */
+.author-btn:hover {
+    background-color: #34495e; /* Цвет фона при наведении (более светлый синий) */
+    transform: translateY(-3px); /* Легкий подъем кнопки при наведении */
+}
+
+/* Эффект при нажатии на кнопку */
+.author-btn:active {
+    transform: translateY(2px); /* Небольшое "погружение" при нажатии */
+}
+
+/* Стили для кнопки "Открой доступ" */
+.subscribe-btn {
+    background: linear-gradient(90deg, #ff5722, #e64a19);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.4);
+}
+
+/* Hover эффект */
+.subscribe-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 87, 34, 0.6);
+}
+
+/* Active эффект */
+.subscribe-btn:active {
+    transform: translateY(0);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект волны */
+.subscribe-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(1);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.6s, opacity 0.6s;
+}

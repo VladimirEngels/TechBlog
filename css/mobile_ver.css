@@ -1,0 +1,96 @@
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap; /* Перенос элементов на новую строку */
+    }
+
+    .header-left {
+        justify-content: center;
+        order: 1; /* Порядок элементов на мобильных устройствах */
+        width: 100%; /* Ширина 100% */
+        text-align: center;
+    }
+
+    .header-center {
+        text-align: center;
+        order: 2; /* Порядок элементов на мобильных устройствах */
+        width: 100%;
+    }
+
+    .header-right {
+        justify-content: center;
+        order: 3; /* Порядок элементов на мобильных устройствах */
+        width: 100%;
+    }
+
+    .nav {
+        flex-wrap: wrap; /* Перенос ссылок на новые строки */
+        justify-content: center; /* Центрирование навигации */
+    }
+
+    .container {
+        padding: 0 10px; /* Меньшие отступы на мобильных устройствах */
+    }
+}
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap; /* Перенос элементов в шапке */
+        gap: 10px; /* Расстояние между элементами */
+    }
+
+    .header-left, .header-center, .header-right {
+        text-align: center; /* Центрирование текста */
+        width: 100%; /* Ширина 100% */
+    }
+}
+/* Адаптация комментариев для мобильных */
+@media (max-width: 768px) {
+    .comments-section {
+        padding: 15px; /* Уменьшенные отступы для мобильных */
+    }
+
+    .comment {
+        padding-left: 10px; /* Уменьшенный отступ слева */
+        margin-bottom: 10px; /* Отступ снизу */
+    }
+
+    .comment-content {
+        padding: 8px 10px; /* Уменьшенные отступы в комментариях */
+    }
+
+    .comment-meta {
+        font-size: 0.75rem; /* Уменьшенный размер шрифта */
+        flex-wrap: wrap; /* Перенос метаинформации */
+        gap: 5px; /* Меньшее расстояние между элементами */
+    }
+
+    .reply-btn {
+        font-size: 0.8rem; /* Уменьшенный размер кнопки */
+    }
+}
+
+  /* Для кнопок на мобильных устройствах увеличим размеры */
+  @media (max-width: 600px) {
+    .like-btn, .dislike-btn {
+      font-size: 1rem;
+      padding: 8px 15px;
+    }
+  }
+  
+
+  /* Мобильная версия */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .article-row {
+        grid-template-columns: 1fr; /* Для мобильных устройств карточки идут по одной в ряд */
+        gap: 20px;
+    }
+
+    .article-card {
+        width: 100%;
+    }
+}

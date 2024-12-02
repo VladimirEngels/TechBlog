@@ -1,0 +1,112 @@
+/* Основные стили для main */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #2a2e3b; /* Более темный фон для main */
+    color: #e0e0e0;
+}
+
+/* Заголовки в main */
+main h2, main h3 {
+    color: #61dafb;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Вкладки */
+.tabs-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #3b434f; /* Темнее фон для вкладок */
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    color: #e0e0e0;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 6px;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: #61dafb;
+    color: #1f212d;
+}
+
+/* Содержание вкладок */
+.tab-content {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Кнопки внутри main */
+.primary-btn {
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    background-color: #61dafb;
+    color: #1f212d;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.primary-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Ссылки */
+a {
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* Текстовые параграфы и отступы */
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Списки */
+ul {
+    margin-bottom: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Активные кнопки вкладок */
+.tab-btn.active {
+    font-weight: bold;
+    color: #1f212d;
+}

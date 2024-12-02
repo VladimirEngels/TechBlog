@@ -1,0 +1,251 @@
+/* :root для глобальных переменных */
+:root {
+    --light-bg: #f9f9f9;
+    --dark-bg: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.2);
+    --card-shadow-hover: rgba(0, 0, 0, 0.5);
+    --primary-text: #000000;
+    --secondary-text: #333333;
+    --meta-text: #555555;
+    --link-hover: #00aaff;
+    --meta-label-bg: #ff4500;
+    --meta-label-text: #ffffff;
+    --border-radius: 10px; /* Слегка увеличен радиус */
+    --spacing: 16px; /* Уменьшен отступ для компактности */
+    --button-bg: #00aaff;
+    --button-hover-bg: #0077cc;
+    --input-bg: #333;
+    --input-border: #444;
+    --input-hover-bg: #444;
+}
+
+/* Общий стиль для всего контента */
+body, .article, .card {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: var(--dark-bg);
+}
+
+/* Стиль самой карточки */
+.card {
+    background-color: var(--dark-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    margin-bottom: var(--spacing);
+    padding: var(--spacing);
+    position: relative;
+    z-index: 2; /* Карточка будет поверх размытого фона */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px; /* Увеличена минимальная высота для улучшения восприятия */
+}
+
+/* Эффект ховера на карточку */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px var(--card-shadow-hover);
+}
+
+/* Заголовок карточки */
+.card-title {
+    font-size: 2rem;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-title a:hover {
+    color: var(--link-hover);
+}
+
+/* Метаинформация */
+.card-meta {
+    font-size: 0.85rem;
+    color: var(--meta-text);
+    margin-bottom: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.meta-label {
+    background-color: var(--meta-label-bg);
+    color: var(--meta-label-text);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Изображения */
+.card img {
+    all: unset; /* Сбрасываем все стили */
+    display: block; /* Убираем inline-формат */
+    width: 100%; /* Подстраиваем ширину под контейнер */
+    height: auto; /* Сохраняем пропорции */
+}
+
+/* Текст карточки */
+.card-text {
+    font-size: 1.2rem;  /* Увеличение размера шрифта */
+    line-height: 1.75;  /* Увеличиваем межстрочный интервал для лучшей читаемости */
+    color: #d0d0d0;     /* Цвет текста */
+    margin-bottom: 18px;
+    text-align: justify; /* Выравнивание текста по ширине */
+    padding-right: 15px;
+    max-height: 80px;  /* Ограничена высота текста для улучшения восприятия */
+    overflow: hidden;  /* Скрывает лишний текст */
+    opacity: 0.7;      /* Небольшая прозрачность */
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    font-family: 'Georgia', serif;  /* Используем шрифт с засечками для элегантности */
+}
+/* При наведении на карточку раскрывается текст и изображение */
+.card-container:hover .card-text {
+    max-height: 1000px; /* Убираем ограничение по высоте */
+    opacity: 1;         /* Текст становится полностью видимым */
+}
+
+/* Плавное увеличение изображения при наведении */
+.card-container:hover .card-image {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Плавное поднятие карточки при наведении */
+.card-container:hover .card {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px var(--card-shadow-hover);
+}
+
+.article-tags .tag {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+  
+body.light-theme .article-tags .tag:hover {
+    background-color: #003d80; /* Цвет ярлыков при наведении */
+  }
+
+  /* Светлая тема для статей */
+body.light-theme .card {
+    background-color: #ffffff; /* Белый фон */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Легкое свечение */
+    color: #000000; /* Черный текст */
+}
+
+body.light-theme .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Усиленное свечение */
+}
+
+body.light-theme .card-title {
+    color: #0056b3; /* Темно-синий заголовок */
+}
+
+body.light-theme .card-title a:hover {
+    color: #003d80; /* Синий заголовок при наведении */
+}
+
+body.light-theme .card-meta {
+    color: #666; /* Темный серый для метаданных */
+}
+
+body.light-theme .card-text {
+    color: #333; /* Темно-серый текст */
+}
+
+body.light-theme .article-tags .tag {
+    background-color: #0056b3; /* Синий фон ярлыков */
+    color: #ffffff; /* Белый текст ярлыков */
+}
+
+body.light-theme .article-tags .tag:hover {
+    background-color: #003d80; /* Темно-синий фон ярлыков при наведении */
+}
+
+/* Темная тема для статей */
+body.dark-theme .card {
+    background-color: #1f1f1f; /* Темно-серый фон */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Светящееся свечение */
+    color: #ffffff; /* Белый текст */
+}
+
+body.dark-theme .card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Усиленное свечение */
+}
+
+body.dark-theme .card-title {
+    color: #4fa3f7; /* Ярко-голубой заголовок */
+}
+
+body.dark-theme .card-title a:hover {
+    color: #82cfff; /* Более светлый голубой при наведении */
+}
+
+body.dark-theme .card-meta {
+    color: #999999; /* Светло-серый текст метаданных */
+}
+
+body.dark-theme .card-text {
+    color: #dddddd; /* Светло-серый текст */
+}
+
+/* Светлая тема: изображения */
+body.light-theme .card img {
+    filter: none; /* Убираем любые фильтры */
+    border: none; /* Убираем рамки */
+    box-shadow: none; /* Убираем тень */
+    transition: filter 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+/* Темная тема: изображения */
+body.dark-theme .card img {
+    filter: brightness(1); /* Сохраняем естественный вид */
+    border: none; /* Убираем рамки */
+    box-shadow: none; /* Убираем тень */
+    transition: filter 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: transparent; /* Сделаем фон прозрачным */
+    color: #434040; /* Цвет стрелки */
+    border: none;
+    font-size: 36px; /* Размер стрелки */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+}
+
+#back-to-top:hover {
+    color: #353535; /* Цвет стрелки при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+#back-to-top i {
+    font-size: 36px; /* Размер стрелки */
+}

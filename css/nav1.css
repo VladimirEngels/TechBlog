@@ -1,0 +1,84 @@
+/* Навигация */
+/* Общие стили навигации */
+.nav {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+    margin-left: 30px; /* Отступ для сдвига всей навигации вправо */
+}
+
+.nav-link {
+    display: inline-block; /* Устанавливаем кнопку как inline-block для динамического изменения ширины */
+    position: relative;
+    padding: 10px 20px; /* Просторные кнопки */
+    font-size: 18px; /* Крупный текст */
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid transparent; /* Начальная прозрачная граница */
+    border-radius: 5px; /* Слегка закругленные края */
+    overflow: hidden; /* Для эффекта */
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Эффект подсветки под кнопкой */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6f61, #ffca61); /* Градиентная линия */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Анимация при наведении */
+.nav-link:hover {
+    color: #ffca61; /* Цвет текста */
+    border-color: #ffca61; /* Цвет границы */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Линия полностью под кнопкой */
+    left: 0; /* Сдвиг на начало кнопки */
+}
+
+/* Активная ссылка */
+.nav-link[aria-current="page"] {
+    color: #ff6f61; /* Активный цвет текста */
+    font-weight: bold;
+    border-color: #ff6f61;
+}
+
+.nav-link[aria-current="page"]::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* Ссылки навигации в светлой теме */
+body.light-theme .nav-link {
+    color: #333; /* Темный цвет для ссылок */
+}
+
+body.light-theme .nav-link:hover {
+    background-color: #ddd; /* Светлый фон при наведении */
+}
+
+/* Ссылки навигации в темной теме */
+body.dark-theme .nav-link {
+    color: #fff; /* Светлый цвет для ссылок */
+}
+
+body.dark-theme .nav-link:hover {
+    background-color: #333; /* Темный фон при наведении */
+}
+
+/* Общие стили для ссылок */
+.nav-link {
+    padding: 5px 10px; /* Внутренние отступы для ссылок */
+    border-radius: 5px; /* Скругленные углы */
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+

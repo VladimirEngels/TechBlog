@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Подключение стилей и мета-информации -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ТехБлог - последние новости и статьи о технологиях, разработке и дизайне.">
+    <title>ТехБлог</title>
+    <link rel="stylesheet" href="css/style - all.css">
+    <link rel="stylesheet" href="css/header1.css">
+    <link rel="stylesheet" href="css/comment1.css">
+    <link rel="stylesheet" href="css/nav1.css">
+    <link rel="stylesheet" href="css/footer1.css">
+    <link rel="stylesheet" href="css-raz/raz.css">
+    <link rel="stylesheet" href="css/stati.css">
+    <!-- <link rel="stylesheet" href="css/mobile_ver.css"> -->
+</head>
+<body>
+
+     <!-- Шапка сайта -->
+     <header class="header">
+        <div class="container header-container">
+            <!-- Левая часть шапки -->
+            <div class="header-left">
+                <h1 class="logo">ТехБлог</h1>
+                <div class="vertical-line"></div> <!-- Вертикальная линия -->
+                <a href="./avtor.html"><button class="btn author-btn">КАК СТАТЬ АВТОРОМ</button></a>
+
+            </div>
+
+            <!-- Центр шапки -->
+            <div claas="HH">
+                <p class="header-highlight">👋 Бэкэндеры, с кем у вас мэтч?</p>
+            </div>
+            <div class="header-center">
+                <nav class="nav">
+                    <a href="./index.html" class="nav-link">Моя лента</a>
+                    <a href="./feed.html" class="nav-link">Все потоки</a>
+                    <a href="./raz.html" class="nav-link"aria-current="page">Разработка</a>
+                    <a href="./diz.html" class="nav-link">Дизайн</a>
+                    <a href="./adm.html" class="nav-link">Администрирование</a>
+                </nav>
+            </div>
+
+            <!-- Правая часть шапки -->
+            <div class="header-right">
+                <button id="theme-toggle" class="btn theme-toggle-btn" aria-label="Переключить тему">🌙/☀️</button>
+                <div class="search-container">
+                    <button class="btn search-icon" id="search-icon" aria-label="Открыть поиск">
+                        <i class="fas fa-search"></i>
+                    </button>                    
+                    <form id="search-form" class="search-form" aria-label="Форма поиска">
+                        <input type="text" class="search-bar" name="q" placeholder="Поиск...">
+                        <button type="submit" class="btn search-btn">Найти</button>
+                    </form>
+                </div>
+                <a href="./premium.html"><button class="btn subscribe-btn">Премиум доступ</button></a>
+                <button class="btn login-btn">Войти</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="habr-main">
+        <h1>Все статьи о разработке</h1>
+    
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="frontend">Frontend</button>
+            <button class="tab-btn" data-tab="backend">Backend</button>
+            <button class="tab-btn" data-tab="devops">DevOps</button>
+            <button class="tab-btn" data-tab="mobile">Mobile Development</button>
+        </div>
+    
+        <div class="articles-container">
+            <!-- Frontend Tab -->
+            <div class="tab-content active" id="frontend">
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="img/9.jpg" alt="Frontend Development">
+                        <h3>Основы frontend разработки</h3>
+                        <p>Веб-разработка с использованием HTML, CSS и JavaScript — как стать профессионалом frontend разработчиком.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="img/10.jpg" alt="React Development">
+                        <h3>React: Самые важные фишки</h3>
+                        <p>Как работать с React — один из самых популярных фреймворков для создания UI в веб-разработке.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="img/11.png" alt="Vue.js Development">
+                        <h3>Vue.js: создание динамичных приложений</h3>
+                        <p>Все, что вам нужно знать о Vue.js, одном из самых популярных фреймворков для создания SPA.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="img/12.jpg" alt="Angular">
+                        <h3>Angular: пошаговое руководство</h3>
+                        <p>Изучите основы Angular и создавайте современные веб-приложения с этим фреймворком.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="img/13.jpg" alt="Sass">
+                        <h3>Использование Sass для стилизации</h3>
+                        <p>Как работать с препроцессором Sass для удобного написания CSS.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="img/14.jpg" alt="React Hooks">
+                        <h3>React Hooks: основы и практическое применение</h3>
+                        <p>Как использовать React Hooks для эффективной работы с состоянием и эффектами в компонентах.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="img/15.jpg" alt="CSS Grid">
+                        <h3>Мощь CSS Grid</h3>
+                        <p>Как CSS Grid позволяет легко и эффективно управлять макетами на веб-странице.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="img/16.jpg" alt="JavaScript">
+                        <h3>JavaScript для новичков</h3>
+                        <p>Основы JavaScript: от простых синтаксических конструкций до сложных фичей языка.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="img/17.png" alt="Webpack">
+                        <h3>Основы Webpack для веб-разработки</h3>
+                        <p>Как использовать Webpack для улучшения сборки фронтенд-приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Backend Tab -->
+            <div class="tab-content" id="backend">
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://avatars.mds.yandex.net/i?id=65c691301eef432cd41bf371ca5a5f7bdaa3f25c-9555577-images-thumbs&n=13" alt="Backend Development">
+                        <h3>Backend на Python</h3>
+                        <p>Создание серверной логики на Python: от простых приложений до сложных веб-сервисов.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="img/18.jpg" alt="Django Framework">
+                        <h3>Django для профессионалов</h3>
+                        <p>Полный гайд по использованию Django, фреймворка для создания веб-приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://avatars.mds.yandex.net/i?id=bda94253fb8af3754baf0bdda4f3ac2f_l-5325303-images-thumbs&n=13" alt="Express.js">
+                        <h3>Express.js: от создания серверов до REST API</h3>
+                        <p>Как эффективно использовать Express.js для создания серверных приложений и REST API.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://i.ytimg.com/vi/87-reeNINcs/maxresdefault.jpg" alt="MongoDB">
+                        <h3>MongoDB: работа с базой данных</h3>
+                        <p>Как эффективно использовать MongoDB для хранения данных в серверных приложениях.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://habrastorage.org/webt/bs/ml/lo/bsmllozt2li3jmn_6ec8vy4krdq.png" alt="Node.js">
+                        <h3>Node.js: быстрые серверные приложения</h3>
+                        <p>Как создавать высокопроизводительные серверные приложения с использованием Node.js.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://media.dev.to/cdn-cgi/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4ygvtend16tw2eta8r1c.png" alt="Ruby">
+                        <h3>Ruby on Rails: создание веб-приложений</h3>
+                        <p>Изучите Ruby on Rails и научитесь создавать полнофункциональные веб-приложения.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://avatars.mds.yandex.net/i?id=a7b99967779d15a617f7d5f02009b0213733a577-8316779-images-thumbs&n=13" alt="Java">
+                        <h3>Backend с Java</h3>
+                        <p>Как создавать надежные и масштабируемые серверные приложения с использованием Java.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://repository-images.githubusercontent.com/396983871/40519caf-8508-41f0-b0be-7839c2d3a720" alt="Spring">
+                        <h3>Spring Framework для создания веб-приложений</h3>
+                        <p>Как использовать Spring для создания масштабируемых приложений на Java.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://webhostinggeeks.com/blog/wp-content/uploads/2023/05/Apache_HTTP_Server-1200x757-optimized.png" alt="Apache">
+                        <h3>Сервера Apache и их настройка</h3>
+                        <p>Как настроить и использовать сервер Apache для создания надежных веб-приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- DevOps Tab -->
+            <div class="tab-content" id="devops">
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://rtslabs.com/wp-content/uploads/2018/05/What-is-DevOps-1-scaled.jpg" alt="DevOps">
+                        <h3>Основы DevOps</h3>
+                        <p>Понимание и внедрение принципов DevOps для ускорения процессов разработки и развертывания приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://avatars.mds.yandex.net/i?id=4a1a6426551a9a97ae23356c2b65f36a_l-7546005-images-thumbs&n=13" alt="Kubernetes">
+                        <h3>Введение в Kubernetes</h3>
+                        <p>Что такое Kubernetes и как его использовать для масштабируемости контейнеризованных приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://i.ytimg.com/vi/x77A9YLMXMI/maxresdefault.jpg" alt="Docker">
+                        <h3>Docker: контейнеризация для новичков</h3>
+                        <p>Что такое Docker и как начать использовать контейнеризацию для эффективной разработки и развертывания приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://syslint.com/wp-content/uploads/2019/03/Ansible-Vault.jpg" alt="Ansible">
+                        <h3>Ansible: автоматизация инфраструктуры</h3>
+                        <p>Как использовать Ansible для автоматизации развертывания и настройки серверов.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://habrastorage.org/getpro/habr/upload_files/7be/3be/41e/7be3be41e8d010dbd5c5036c9993f8f3.png" alt="Jenkins">
+                        <h3>Jenkins для CI/CD</h3>
+                        <p>Как настроить Jenkins для автоматической сборки и развертывания приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://pic.rutubelist.ru/video/fa/8e/fa8e3da2c50bcdd0f8eb53dc4f18b811.png" alt="Terraform">
+                        <h3>Terraform: управление инфраструктурой как кодом</h3>
+                        <p>Как использовать Terraform для создания и управления инфраструктурой с использованием кода.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://user-images.githubusercontent.com/61084486/133907416-16855ced-5c08-4eb5-88c3-2b3b23aac0fc.png" alt="Chef">
+                        <h3>Chef: автоматизация развертывания</h3>
+                        <p>Как настроить и использовать Chef для автоматизации конфигураций серверов и приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://img-0.journaldunet.com/I_PllYjbUfoYWVcjwK_LG2XaIoA=/1280x/smart/7a11a0a77f3440478fc99cdb572c5caf/ccmcms-jdn/11632731.jpg" alt="Puppet">
+                        <h3>Puppet для DevOps</h3>
+                        <p>Как использовать Puppet для управления конфигурацией и автоматизации операций в DevOps.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://img-medianova.mncdn.com/wp-content/uploads/sites/8/2019/05/multi_cloud.jpg" alt="Cloud">
+                        <h3>Облачные технологии для DevOps</h3>
+                        <p>Как использовать облачные платформы для развертывания и управления приложениями в DevOps.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Mobile Tab -->
+            <div class="tab-content" id="mobile">
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="img/19.png" alt="Mobile Development">
+                        <h3>Мобильная разработка с React Native</h3>
+                        <p>Как использовать React Native для создания кросс-платформенных мобильных приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://s3-ap-south-1.amazonaws.com/trt-blog-ghost/2022/12/Flutter-app-development.jpg" alt="Flutter Development">
+                        <h3>Flutter: будущее мобильной разработки</h3>
+                        <p>Почему стоит изучать Flutter — фреймворк для кросс-платформенных мобильных приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://coconala.akamaized.net/coconala-public-files/service_images/original/7145e4c0-1013123.png" alt="iOS Development">
+                        <h3>Разработка под iOS с Swift</h3>
+                        <p>Как разработать мобильные приложения под iOS с использованием языка программирования Swift.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://media.proglib.io/tests/2020/02/15/7a5ce617d5d70454e0c19c6dae73ffc8.png" alt="Android Development">
+                        <h3>Android-разработка с Kotlin</h3>
+                        <p>Изучите основы разработки мобильных приложений для Android с использованием Kotlin.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://cdn.freelance.ru/images/att/1574115_900_600.png">
+                        <h3>Xamarin для мобильных приложений</h3>
+                        <p>Как использовать Xamarin для создания кросс-платформенных мобильных приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://avatars.mds.yandex.net/i?id=f47701143ba2ba2306b018fce7e5649d13c4177c-12923036-images-thumbs&n=13" alt="SwiftUI">
+                        <h3>SwiftUI для iOS-разработки</h3>
+                        <p>Как использовать SwiftUI для создания современных приложений на iOS.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+                <div class="article-row">
+                    <div class="article-card">
+                        <img src="https://i.pinimg.com/originals/6f/2f/e4/6f2fe46297bd2d4b9478cf27495db495.webp" alt="React Native">
+                        <h3>React Native: кросс-платформенные приложения</h3>
+                        <p>Как работать с React Native для создания приложений под Android и iOS.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://overclockers.ru/st/legacy/blog/427318/419269_O.jpg" alt="Unity">
+                        <h3>Unity для мобильных игр</h3>
+                        <p>Создание мобильных игр с использованием игрового движка Unity.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://i.pinimg.com/originals/6c/1a/4a/6c1a4a88538ddb1ee6fdea5e7ec8e5e5.png" alt="Kotlin">
+                        <h3>Программирование на Kotlin для мобильных приложений</h3>
+                        <p>Как использовать Kotlin для разработки надежных мобильных приложений.</p>
+                        <a href="#">Читать статью</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <footer class="footer">
+                <div class="footer-container">
+                    <!-- Левая часть: О нас и Контакты -->
+                    <div class="footer-left">
+                        <button class="footer-toggle" aria-expanded="false">О нас <span>&#x25BA;</span></button>
+                        <div class="footer-content">
+                            <p>Мы предоставляем свежие новости и статьи о технологиях, разработке и дизайне. Наши эксперты помогают разобраться в последних тенденциях и предоставляют полезные советы для профессионалов в области IT и дизайна. Мы стремимся делать сложные концепции доступными для широкой аудитории и помочь всем, кто интересуется новыми технологиями и их применением в реальной жизни.</p>
+                            <p>В нашей команде работают специалисты с многолетним опытом, которые регулярно делятся своими знаниями о последних новшествах в мире программирования, веб-разработки, искусственного интеллекта и других сфер, которые меняют будущее.</p>
+                        </div>
+                        <button class="footer-toggle" aria-expanded="false">Контакты <span>&#x25BA;</span></button>
+                        <div class="footer-content">
+                            <p>Свяжитесь с нами:</p>
+        <p>Email: <a href="mailto:support@techblog.ru">support@techblog.ru</a></p>
+        <p>Телефон: <a href="tel:+74951234567">+7 495 123 45 67</a></p>
+        <p>Мы всегда рады ответить на ваши вопросы и готовы обсудить сотрудничество, рекламу или любые другие предложения. Наши специалисты всегда готовы помочь вам разобраться в сложных вопросах, касающихся технологий и цифровых решений.</p>
+        <p>Кроме того, следите за нашими новостями в социальных сетях и подписывайтесь на нашу рассылку, чтобы не пропустить самые важные обновления и статьи!</p>
+                        </div>
+                    </div>
+            
+                    <!-- Правая часть: Социальные сети -->
+                    <div class="footer-right">
+                        <h4> </h4>
+                        <div class="footer-socials">
+                            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com" target="_blank" class="social-btn" aria-label="X">
+                                <i class="fab fa-x"></i>
+                            </a>                            
+                            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Нижний текст -->
+                <div class="footer-bottom">
+                    © 2024 ТехБлог. Все права защищены.
+                </div>
+            </footer>
+            
+    
+
+    <!-- Подключение скриптов -->
+    <script src="JS/script.js"></script>
+
+<script>
+    // Получаем все кнопки вкладок
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    
+    // Получаем все вкладки (содержимое)
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // Добавляем обработчик событий для каждой кнопки вкладки
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Удаляем класс 'active' с всех кнопок вкладок
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Добавляем класс 'active' только на ту кнопку, по которой кликнули
+            button.classList.add('active');
+            
+            // Скрываем все вкладки
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Показываем ту вкладку, которая соответствует выбранной кнопке
+            const activeTab = document.getElementById(button.getAttribute('data-tab'));
+            activeTab.classList.add('active');
+        });
+    });
+</script>
+
+    
+</body>
+</html>

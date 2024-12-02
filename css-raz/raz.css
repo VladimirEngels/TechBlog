@@ -1,0 +1,212 @@
+/* Основной контейнер */
+.habr-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #f5f5f5;
+    background-color: #121212; /* Темная тема */
+}
+
+/* Заголовок */
+.habr-main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* Стиль для вкладок */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Стиль для активной кнопки */
+.tab-btn.active {
+    background-color: #f44336;
+    color: #fff;
+    transform: scale(1.1); /* Немного увеличиваем вкладку для эффекта */
+}
+
+/* Изменение цвета кнопки при наведении */
+.tab-btn:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Контейнер для статей */
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Каждая строка с тремя статьями */
+.article-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Используем сетку с 3 колонками */
+    gap: 20px;
+    margin-bottom: 30px; /* Отступ между строками */
+}
+
+/* Стиль каждой карточки статьи */
+.article-card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px; /* Устанавливаем минимальную высоту */
+}
+
+/* Карточки при наведении */
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Изображения внутри карточки */
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Заголовок статьи */
+.article-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Описание статьи */
+.article-card p {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Чтобы описание занимало оставшееся пространство */
+}
+
+/* Ссылка на статью */
+.article-card a {
+    font-size: 1rem;
+    color: #f44336;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.article-card a:hover {
+    color: #fff;
+}
+
+/* Стили для скрытых вкладок */
+.tab-content {
+    display: none;
+}
+
+/* Показываем активную вкладку */
+.tab-content.active {
+    display: block;
+}
+
+
+/* Стили для карточек в светлой теме */
+body.light-theme .article-card {
+    background-color: #ffffff; /* Белый фон */
+    color: #000000; /* Черный текст */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Легкое свечение */
+}
+
+body.light-theme .article-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Усиленное свечение */
+}
+
+body.light-theme .article-card h3 {
+    color: #0056b3; /* Темно-синий заголовок */
+}
+
+body.light-theme .article-card a {
+    color: #007bff;
+}
+
+body.light-theme .article-card a:hover {
+    color: #003d80; /* Синий при наведении */
+}
+
+/* Стили для карточек в темной теме */
+body.dark-theme .article-card {
+    background-color: #1f1f1f; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Легкое свечение */
+}
+
+body.dark-theme .article-card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Усиленное свечение */
+}
+
+body.dark-theme .article-card h3 {
+    color: #f44336; /* Ярко-голубой заголовок */
+}
+
+body.dark-theme .article-card a {
+    color: #e3281b;
+}
+
+body.dark-theme .article-card a:hover {
+    color: #be3127; /* Синий при наведении */
+}
+
+/* Стили для заголовков вкладок */
+body.light-theme .tab-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+body.dark-theme .tab-btn.active {
+    background-color: #4fa3f7;
+    color: white;
+}
+
+/* Прочие изменения для светлой и темной темы */
+body.light-theme {
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333; /* Темный текст */
+}
+
+body.dark-theme {
+    background-color: #121212; /* Темный фон */
+    color: #f4f4f4; /* Светлый текст */
+}
+
+/* Стили для изображений */
+body.light-theme .article-card img {
+    filter: none; /* Без фильтров */
+}
+
+body.dark-theme .article-card img {
+    filter: brightness(0.8); /* Затемняем изображения в темной теме */
+}
+
+

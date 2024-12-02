@@ -1,0 +1,507 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Светлая тема */
+body.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Стили для header и footer */
+header, footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Стили для subscriptions */
+.subscriptions {
+    padding: 60px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Светлая тема для основного контента */
+body.light-theme .subscriptions {
+    background-color: #f4f4f4;
+}
+
+/* Темная тема для основного контента */
+body.dark-theme .subscriptions {
+    background-color: #1f1f1f;
+}
+
+/* Стили для заголовков */
+.subscriptions-title, .section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* Стили для планов подписок */
+.subscription-options {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* Стили для каждого плана */
+.subscription-plan {
+    border-radius: 20px;
+    padding: 30px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+}
+
+/* Легкий старт — голубой фон */
+.subscription-plan.light-start {
+    background-color: #80d0ff;
+    color: #fff;
+}
+
+/* Все возможности — зеленый фон */
+.subscription-plan.all-options {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+/* Стать нашим героем — фиолетовый фон */
+.subscription-plan.hero {
+    background-color: #9c27b0;
+    color: #fff;
+}
+
+/* Темная тема для карточек */
+body.dark-theme .subscription-plan {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Темная тема для карточек */
+body.dark-theme .subscription-plan.light-start {
+    background-color: #0099cc;
+}
+
+body.dark-theme .subscription-plan.all-options {
+    background-color: #388e3c;
+}
+
+body.dark-theme .subscription-plan.hero {
+    background-color: #7b1fa2;
+}
+
+/* Эффект при наведении на карточки */
+.subscription-plan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Мягкая тень */
+}
+
+/* Добавим box-shadow для соответствующих цветов */
+.subscription-plan.light-start:hover {
+    box-shadow: 0 10px 30px rgba(0, 154, 204, 0.5); /* Голубая тень */
+}
+
+.subscription-plan.all-options:hover {
+    box-shadow: 0 10px 30px rgba(102, 187, 106, 0.5); /* Зеленая тень */
+}
+
+.subscription-plan.hero:hover {
+    box-shadow: 0 10px 30px rgba(156, 39, 176, 0.5); /* Фиолетовая тень */
+}
+
+/* Заголовки карточек */
+.subscription-plan .plan-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: inherit;
+}
+
+/* Описание карточек (увеличено до 18px) */
+.subscription-plan .plan-description {
+    font-size: 18px; /* Увеличен размер шрифта */
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: #eee;
+}
+
+/* Цена карточек */
+.subscription-plan .plan-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+/* Описание карточек в светлой теме */
+body.light-theme .subscription-plan .plan-description {
+    color: #333;
+}
+
+/* Убираем изменения яркости в светлой теме */
+body.light-theme .subscription-plan.light-start,
+body.light-theme .subscription-plan.all-options,
+body.light-theme .subscription-plan.hero {
+    background-color: #80d0ff; /* Цвет остается постоянным */
+}
+
+body.light-theme .subscription-plan.all-options {
+    background-color: #66bb6a;
+}
+
+body.light-theme .subscription-plan.hero {
+    background-color: #9c27b0;
+}
+
+
+/* Общие стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+}
+
+/* Общие стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+}
+
+/* Контент модального окна */
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+/* Заголовок модального окна */
+.modal-header h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Основной текст и описание */
+.modal-body p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Выгоды для подписчиков */
+#modal-benefits {
+    font-size: 16px;
+    color: #f1f1f1;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #ff5722;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Кнопка подписки в модальном окне */
+.modal-content .subscribe-btn {
+    margin-top: 20px;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .subscribe-btn:hover {
+    background-color: #ff784e;
+}
+
+/* Модальные стили для светлой темы */
+body.light-theme .modal-content {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-theme .modal-content .subscribe-btn {
+    background-color: #ff5722;
+}
+
+/* Кнопка корзины */
+.cart-btn {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Иконка корзины */
+.cart-icon {
+    width: 30px;  /* размер иконки */
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Кнопка корзины при наведении */
+.cart-btn:hover {
+    background-color: #f1987c;
+    transform: scale(1.1);
+}
+
+/* Всплывающее уведомление */
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    text-align: center;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Модальное окно корзины */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cart-content {
+    background-color: #222;
+    color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.cart-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff9800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Список товаров */
+.cart-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    border-top: 1px solid #333;
+}
+
+.cart-content ul li {
+    font-size: 18px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.cart-content ul li span {
+    max-width: 70%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Кнопки "Удалить" */
+.cart-content ul li button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cart-content ul li button:hover {
+    background-color: #ff784e;
+    transform: scale(1.1);
+}
+
+/* Общая сумма */
+.cart-total {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #66bb6a;
+}
+
+.cart-total span {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Кнопка оформления заказа */
+.checkout-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-btn:hover {
+    background-color: #34d058;
+    transform: scale(1.1);
+}
+
+/* Кнопка закрытия */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    border: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff5722;
+}
+
+/* Картинка с количеством товаров */
+.cart-count {
+    font-size: 18px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+/* Возвращаем текст на левую сторону */
+footer {
+    text-align: left;
+}

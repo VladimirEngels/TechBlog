@@ -1,0 +1,349 @@
+/* Основной стиль страницы */
+.design-page {
+    font-family: 'Roboto', sans-serif; /* Устанавливаем шрифт для всей страницы */
+    color: #fff; /* Цвет текста белый */
+    background: #1e1e1e; /* Темный фон */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Герой-секция: основной баннер с заголовком и кнопкой */
+.hero-section {
+    background: linear-gradient(135deg, #ff5722, #ff9800); /* Градиентный фон */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 80px 20px; /* Отступы сверху и снизу */
+    color: #fff; /* Белый цвет текста */
+    animation: fadeIn 1.5s ease-in-out; /* Анимация появления */
+}
+
+.hero-section h1 {
+    font-size: 48px; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    text-transform: uppercase; /* Заглавные буквы */
+}
+
+.hero-section p {
+    font-size: 20px; /* Размер параграфа */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.hero-section .btn {
+    padding: 15px 30px; /* Отступы внутри кнопки */
+    background: #212121; /* Темный фон кнопки */
+    color: #fff; /* Белый цвет текста кнопки */
+    border: 2px solid #fff; /* Белая рамка кнопки */
+    border-radius: 25px; /* Округлые углы */
+    cursor: pointer; /* Курсор в виде руки */
+    font-size: 18px; /* Размер шрифта кнопки */
+}
+
+.hero-section .btn:hover {
+    background: #fff; /* Белый фон при наведении */
+    color: #ff5722; /* Оранжевый цвет текста при наведении */
+}
+
+/* Секция трендов: блок с трендами */
+.trends-section {
+    padding: 60px 20px; /* Отступы внутри секции */
+    margin-bottom: 60px; /* Отступ снизу */
+}
+
+.trends-section h2 {
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 40px; /* Отступ снизу */
+    font-size: 36px; /* Размер заголовка */
+    color: #ff9800; /* Оранжевый цвет заголовка */
+}
+
+/* Сетка галереи: отображение изображений в сетке */
+.gallery {
+    display: grid; /* Используем grid для сетки */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Автоматическое распределение колонок */
+    gap: 20px; /* Отступы между элементами */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.gallery-item {
+    position: relative; /* Устанавливаем позицию для наложений */
+    overflow: hidden; /* Скрываем часть изображения, выходящую за пределы */
+    border-radius: 10px; /* Округлые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+    transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.gallery-item:hover {
+    transform: scale(1.03); /* Увеличение при наведении */
+}
+
+.gallery-item img {
+    width: 100%; /* Изображение на всю ширину */
+    height: 100%; /* Изображение на всю высоту */
+    object-fit: cover; /* Сохранение пропорций изображения */
+    transition: transform 0.3s ease; /* Плавный эффект при увеличении изображения */
+    aspect-ratio: 16 / 9; /* Пропорции изображения */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.gallery-item .overlay {
+    position: absolute; /* Абсолютное позиционирование наложения */
+    bottom: 0; /* Позиционируем снизу */
+    left: 0; /* Позиционируем слева */
+    right: 0; /* Позиционируем справа */
+    padding: 10px; /* Отступы внутри наложения */
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+    text-align: center; /* Центрируем текст */
+    color: #fff; /* Белый цвет текста */
+    font-size: 18px; /* Размер шрифта */
+    opacity: 0; /* Изначально скрыто */
+    transition: opacity 0.3s ease; /* Плавный эффект появления */
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1; /* Показываем наложение при наведении */
+}
+
+/* Секция опросов: секция с вопросами для голосования */
+.poll-section {
+    padding: 60px 20px; /* Отступы внутри секции */
+    background: #212121; /* Темный фон */
+    text-align: center; /* Выравнивание текста по центру */
+    margin-bottom: 60px; /* Отступ снизу */
+}
+
+.poll-section h2 {
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 32px; /* Размер заголовка */
+    color: #ff9800; /* Оранжевый цвет заголовка */
+}
+
+.poll-option {
+    display: block; /* Блок для каждого варианта */
+    margin: 10px 0; /* Отступы между вариантами */
+    font-size: 18px; /* Размер шрифта */
+    color: #fff; /* Белый цвет текста */
+}
+
+.poll-option input {
+    margin-right: 10px; /* Отступ справа для радио-кнопки */
+}
+
+.poll-section .btn {
+    margin-top: 20px; /* Отступ сверху */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    background: #ff5722; /* Оранжевый фон кнопки */
+    border: none; /* Без рамки */
+    color: #fff; /* Белый цвет текста */
+    border-radius: 5px; /* Округлые углы */
+    cursor: pointer; /* Курсор в виде руки */
+}
+
+.poll-section .btn:hover {
+    background: #ff9800; /* Оранжевый фон при наведении */
+}
+
+.poll-result {
+    margin-top: 20px; /* Отступ сверху */
+    font-size: 18px; /* Размер шрифта */
+    color: #ff9800; /* Оранжевый цвет результата */
+}
+
+/* Секция советов: советы для пользователей */
+.tips-section {
+    padding: 60px 20px; /* Отступы внутри секции */
+    margin-bottom: 60px; /* Отступ снизу */
+    background: linear-gradient(120deg, #2a2a2a, #1e1e1e); /* Градиентный фон */
+    color: #fff; /* Белый цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Секция советов: заголовок с оформлением */
+.tips-section h2 {
+    font-size: 36px; /* Размер заголовка */
+    margin-bottom: 40px; /* Отступ снизу */
+    color: #ff9800; /* Оранжевый цвет */
+    text-transform: uppercase; /* Заглавные буквы */
+    letter-spacing: 2px; /* Расстояние между буквами */
+}
+
+/* Сетка для карточек советов */
+.tips-grid {
+    display: grid; /* Используем grid для распределения карточек */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Колонки с автоматическим размером */
+    gap: 20px; /* Отступы между элементами */
+    max-width: 1200px; /* Ограничение по ширине */
+    margin: 0 auto; /* Центрирование сетки */
+}
+
+/* Карточки с советами */
+.tip-card {
+    background: #212121; /* Темный фон */
+    border: 1px solid #333; /* Темная рамка */
+    border-radius: 15px; /* Округлые углы */
+    padding: 20px; /* Отступы внутри */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+    transition: transform 0.3s, box-shadow 0.3s; /* Эффект при наведении */
+    overflow: hidden; /* Обрезка содержимого за пределами */
+    position: relative; /* Позиционирование для псевдо-элементов */
+}
+
+.tip-card:hover {
+    transform: translateY(-10px); /* Подъем карточки при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Увеличенная тень */
+}
+
+.tip-card:before {
+    content: ""; /* Псевдо-элемент для наложения */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; left: 0; right: 0; bottom: 0; /* Растягиваем на весь элемент */
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.6), rgba(255, 152, 0, 0.6)); /* Градиент */
+    opacity: 0.1; /* Исходная прозрачность */
+    z-index: 0; /* За основным содержимым */
+    transition: opacity 0.3s; /* Плавный переход прозрачности */
+}
+
+.tip-card:hover:before {
+    opacity: 0.3; /* Увеличиваем прозрачность при наведении */
+}
+
+.tip-card h3 {
+    font-size: 22px; /* Размер заголовка */
+    margin-bottom: 15px; /* Отступ снизу */
+    color: #ff9800; /* Оранжевый цвет заголовка */
+    z-index: 1; /* Поверх наложения */
+}
+
+.tip-card p {
+    font-size: 16px; /* Размер текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    color: #fff; /* Белый цвет текста */
+    z-index: 1; /* Поверх наложения */
+    position: relative; /* Позиционирование для псевдо-элементов */
+}
+
+.tip-icon {
+    font-size: 40px; /* Размер иконки */
+    color: #ff5722; /* Оранжевый цвет */
+    margin-bottom: 10px; /* Отступ снизу */
+    z-index: 1; /* Поверх наложения */
+}
+
+/* Полоса для результата опроса */
+.poll-result-bar {
+    background: #ff5722; /* Оранжевый фон */
+    height: 10px; /* Высота полосы */
+    border-radius: 5px; /* Округлые углы */
+    margin-top: 10px; /* Отступ сверху */
+    transition: width 0.3s ease; /* Плавное изменение ширины */
+}
+
+/* Фильтры для галереи: кнопки фильтров */
+.filter-buttons {
+    text-align: center; /* Центрируем кнопки */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.filter {
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    margin: 5px; /* Отступы между кнопками */
+    background: #ff5722; /* Оранжевый фон кнопки */
+    border: none; /* Без рамки */
+    color: #fff; /* Белый цвет текста */
+    border-radius: 5px; /* Округлые углы */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background 0.3s ease, transform 0.2s ease; /* Эффект при наведении */
+}
+
+.filter:hover {
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+}
+
+.filter.active {
+    background: #ff9800; /* Оранжевый фон для активной кнопки */
+}
+
+/* История дизайна: секция с хронологией */
+.history-section {
+    padding: 60px 20px; /* Отступы внутри секции */
+    margin-bottom: 60px; /* Отступ снизу */
+    transition: background-color 0.3s, color 0.3s; /* Плавные изменения фона и цвета */
+}
+
+/* Заголовок истории */
+.history-header {
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 40px; /* Отступ снизу */
+}
+
+.history-header h2 {
+    font-size: 36px; /* Размер заголовка */
+    color: #ff9800; /* Оранжевый цвет заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.history-header p {
+    font-size: 18px; /* Размер текста */
+    color: #bbb; /* Серый цвет для текста */
+}
+
+/* Хронология: отображение событий */
+.timeline {
+    display: flex; /* Используем flex для вертикальной хронологии */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    gap: 30px; /* Отступы между элементами */
+    max-width: 1200px; /* Ограничение ширины */
+    margin: 0 auto; /* Центрируем хронологию */
+}
+
+.timeline-item {
+    display: flex; /* Используем flex для каждого элемента */
+    flex-direction: column; /* Вертикальное расположение содержимого */
+    background: #333; /* Темный фон */
+    padding: 20px; /* Отступы внутри */
+    border-left: 5px solid #ff9800; /* Оранжевая левая граница */
+    border-radius: 8px; /* Округлые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект при наведении */
+}
+
+.timeline-item:hover {
+    transform: translateX(10px); /* Сдвиг вправо при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
+}
+
+.timeline-date {
+    font-weight: bold; /* Жирный текст для даты */
+    color: #ff9800; /* Оранжевый цвет */
+    font-size: 24px; /* Размер шрифта */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.timeline-content h3 {
+    font-size: 22px; /* Размер заголовка контента */
+    color: #fff; /* Белый цвет текста */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.timeline-content p {
+    font-size: 16px; /* Размер текста */
+    color: #ddd; /* Светлый серый цвет */
+}
+
+/* Анимации: эффект появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Начальная прозрачность */
+        transform: translateY(-30px); /* Начальное смещение */
+    }
+    to {
+        opacity: 1; /* Конечная прозрачность */
+        transform: translateY(0); /* Конечное положение */
+    }
+}
+
+.timeline-item {
+    animation: fadeIn 1s ease-in-out; /* Анимация для элементов хронологии */
+}
+
